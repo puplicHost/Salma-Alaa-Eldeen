@@ -769,7 +769,8 @@
         }
 
         .section.pdfs .pdf-link::before {
-            content: "\f1c1"; /* file-pdf icon */
+            content: "\f1c1";
+            /* file-pdf icon */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             width: 38px;
@@ -794,6 +795,98 @@
             font-weight: 500;
             letter-spacing: 0.2px;
         }
+
+
+.section {
+    background-color: var(--light-color);
+    padding: 60px 0;
+    color: var(--text-color);
+}
+
+.section-header h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+
+/* 🔹 حاوية الكروت */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 🔹 تصميم الكارت */
+.post-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(166, 252, 189, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post-item p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 16px;
+    white-space: pre-line;
+}
+
+.post-item a {
+    display: inline-block;
+    margin: 0 16px 16px;
+    padding: 10px 18px;
+    background: var(--primary-color);
+    color: var(--dark-color);
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.post-item a:hover {
+    background: var(--accent-color);
+    filter: brightness(1.2);
+}
+
+/* 🔹 تأثير الهوفر */
+.post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(166, 252, 189, 0.4);
+}
+
+
+
+
+
 
         /* Modal Styles */
         .modal {
@@ -1207,14 +1300,15 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                     I’m Salma Alaa, a graduate in Clinical Psychology.
-I love learning new things, and I’m always passionate about discovering and experimenting.
+                        I’m Salma Alaa, a graduate in Clinical Psychology.
+                        I love learning new things, and I’m always passionate about discovering and experimenting.
 
-Many people were surprised by my choice of Pascal (Rapunzel’s chameleon friend) as my symbol —
-but honestly, it represents me perfectly: loyal, loving, smart, and able to save itself through adaptation and change.
+                        Many people were surprised by my choice of Pascal (Rapunzel’s chameleon friend) as my symbol —
+                        but honestly, it represents me perfectly: loyal, loving, smart, and able to save itself through
+                        adaptation and change.
 
-That’s exactly my approach to everything I do — devotion, love, mastery, and diversity.
-And above all, what matters most to me is honesty.
+                        That’s exactly my approach to everything I do — devotion, love, mastery, and diversity.
+                        And above all, what matters most to me is honesty.
                     </p>
                 </div>
                 <div class="about-stats">
@@ -1442,15 +1536,13 @@ And above all, what matters most to me is honesty.
         </div>
     </section>
 
-
-
     <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Content Writing</h2>
-            <p>Here, you’ll find my writings in different fields — psychological and beyond.
-You’ll notice growth and evolution in my style,
-because I’m constantly developing myself every single day.</p>
+                <p>Here, you’ll find my writings in different fields — psychological and beyond.
+                    You’ll notice growth and evolution in my style,
+                    because I’m constantly developing myself every single day.</p>
             </div>
             <div class="copies-grid">
                 <div class="copy-item">
@@ -1502,6 +1594,34 @@ because I’m constantly developing myself every single day.</p>
                     </div>
                     <img src="projects/content/008.jpeg" alt="Copy 1" class="copy-img">
                 </div>
+                <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <img src="projects/content/009.png" alt="Copy 1" class="copy-img">
+                </div>
+
+                <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <img src="projects/content/010.jpeg" alt="Copy 1" class="copy-img">
+                </div>
+
+                <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <img src="projects/content/011.jpeg" alt="Copy 1" class="copy-img">
+                </div>
+
+                <div class="copy-item">
+                    <div class="copy-overlay">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <img src="projects/content/012.jpeg" alt="Copy 1" class="copy-img">
+                </div>
+
 
 
 
@@ -1511,20 +1631,266 @@ because I’m constantly developing myself every single day.</p>
         </div>
     </section>
 
+    <section id="posts" class="section">
+        <div class="posts-container">
+            <div class="section-header">
+                <h2>Facebook Posts</h2>
+            </div>
+<div class="cards">
+    <div class="post-item">
+    <img src="projects/content/posts/001.jpg" alt="">
+
+        <p dir="rtl">تخيّل لو كل مرة تبعت CV… يوصلك الرد: "مبروك، تم قبولك"!
+مش مرة ولا اتنين… تخيل 100 "Accept" ورا بعض.
+تحسها حلم؟
+الحلم ده هيبدأ لما:
+تفهم دماغ الـ HR بيفكر إزاي
+وتتعلم إزاي تدخل الإنترفيو واثق ومكسّر حاجز الخوف
+وكمان تتعلم إزاي تعمل CV بطريقة بروفيشنال، مش قوالب جاهزة من جوجل أو شات جبتي 👌، لكن CV معمول صح وبيلائم نظام ATS (وهنشرحلك يعني إيه ATS وإزاي بيشتغل في الشركات الكبيرة)، وبعد الورشة المدرّب بنفسه هيراجعه ويعدّله معاك خطوة بخطوة
+📌 اللي مستنيك في الورشة:
+ إنترفيو فردي كأنك قدام HR حقيقي
+الCV معمول بإيدك بطريقة احترافية + متوافق مع نظام ATS + تقييم وتعديل عليه من المدرّب.
+ تدريب عملي يخليك تدخل أي مقابلة وإنت ضامن فرصتك.
+ كل دا أوفلاين – عملي – بسعر رمزي جدًا.
+ الأماكن محدودة…
+ احجز مكانك دلوقتي قبل ما تتقفل وتفوّت الفرصة!
+📞 للحجز والاستفسار:
+01207744118
+01028415425
+وسجل في الفورم بقا 🧑‍🦯
+https://forms.gle/jJYnghwx9HL2LNML6
+#شكرا_للهاكر
+#لا_يمكنك_هزيمة_شخص_لا_ييأس_ابدا
+#احلم_مع_بداية_جديدة
+#راجعين_اقوى</p>
+        <a href="https://www.facebook.com/share/p/1DJD4ecrZb/">view post</a>
+</div>
+
+<div class="post-item">
+    <img src="projects/content/posts/002.jpg" alt="">
+
+<p dir="rtl">
+    أكتر من نص الناس بيعيشوا طول عمرهم وهم بيتعاملوا مع نفسهم بطريقة مؤذية…
+يجلدوها، يقللوا من نجاحاتها، ويضغطوا عليها لحد ما تنهار
+ومع الوقت، الاحتياجات النفسية الأساسية بتفضل ناقصة، والنقص ده بيبان في شكل فراغ داخلي، قلق، توتر، ومشاكل في العلاقات وحتى في الصحة
+عشان كده عملنا ورشة "الاحتياجات النفسية" 
+هنتكلم فيها عن:
+يعني إيه احتياجات نفسية أساسية؟
+إزاي تعرف إيه الناقص عندك فعلًا؟
+خطوات عملية لإشباع احتياجاتك بطريقة صحية ومتوازنة
+📌 الورشة دي هتكون نقطة بداية جديدة… فرصة إنك تعيد علاقتك بنفسك من أول وجديد
+لو حاسس إنك محتاج تبدأ من جديد… احجز مكانك دلوقتي وخد أول خطوة للتغيير
+ اكتب تم في الكومنتس واحنا هنبعتلك التفاصيل بقا 🥰
+ #لا_يمكنك_هزيمة_شخص_لا_ييأس_ابدا #شكرا_للهاكر #احلم_مع_بداية_جديدة
+</p>
+
+        <a href="https://www.facebook.com/share/p/1DRQMZDhHZ/">view post</a>
+</div>
+
+<div class="post-item">
+    <img src="projects/content/posts/003.jpg" alt="">
+
+<p dir="rtl">
+    الناس بتقولك:
+"لو معاك شغل كويس وحياة مستقرة خلاص هتبقى مبسوط" 🙂
+لكن الحقيقة إنك ممكن يكون عندك كل ده… وبرضه تحس إن في حاجة ناقصاك 💔
+ليه؟
+لأن في احتياجات نفسية أساسية لازم نفهمها ونعرف إزاي نلبيها، وإلا عمر السعادة والرضا ما هيكملوا 
+علشان كده عملنا ورشة الاحتياجات النفسية
+اللي هتعرّفك يعني إيه احتياجات نفسية فعلًا،
+وإزاي تدرك إيه اللي ناقص عندك وتتعامل معاه وسط ضغط وسرعة الحياة
+عاوز تكتشف إيه الاحتياج النفسي اللي ناقصك؟
+سيب كلمة "احتياج" في الكومنت… وهتوصلك كل التفاصيل 
+#شكرا_للهاكر 
+#احلم_مع_بداية_جديدة 
+#راجعين_اقوى 
+#لا_يمكنك_هزيمة_شخص_لا_ييأس_ابدا
+</p>
+
+        <a href="https://www.facebook.com/share/p/14VLY8YxQ1o/">view post</a>
+</div>
+
+<div class="post-item">
+    <img src="projects/content/posts/004.jpg" alt="">
+
+<p dir="rtl">
+    إدارة المشاعر هي انك تتعلم امتى تقول لا!
+أمتى تطلع اللي جواك وازاي تحمي قلبك من التراكم 
+دي مهارة اللي هتفرق بين انك " تندم بعد كل عصبية" 
+ولا" تعرف ترد بهدوء وتحافظ على كرامتك"
+إدارة المشاعر مش بس عشان تبقى أهدى 
+دي مهارة هتساعدك:
+✅تنجح في شغلك 
+✅تفهم شريك حياتك 
+✅وتتواصل احسن مع أسرتك 
+والاهم ..تعرف نفسك!
+ف الورشة معمولة علشانك عشان تفهم نفسك وتعرف تتعامل مع مشاعرك صح 
+لو محجزتش الورشة، هتفوت ع نفسك فرصة تفهم نفسك وتغيرها للأفضل 🫡
+01207744118 للتواصل والحجز كلمنا على رقم:
+العنوان: أسيوط – شارع الجندي أمام مدرسة الحرية للغات
+</p>
+
+        <a href="https://www.facebook.com/share/p/1FDj4qLXne/">view post</a>
+</div>
+
+<div class="post-item">
+    <img src="projects/content/posts/005.jpg" alt="">
+
+<p dir="rtl">
+    جربت قبل كده تحط فراولة في السنارة؟
+أكيد لا 😒
+لأن السمك ما بيحبش الفراولة، حتى لو هي أكلتك المفضلة
+وانت رايح تصطاد، ما بتفكرش في اللي إنت بتحبه…
+بتفكر في اللي يحبه السمك
+ونفس القاعدة دي تنطبق 100٪ على كتابة المحتوى
+كتير من الناس لما تكتب، بتحكي بطريقتها، وتتكلم عن اللي هي شايفاه مهم،
+بس بتنسى تسأل نفسها:
+هو الجمهور اللي بيقرأ محتاج إيه؟
+إيه اللي يشده؟ إيه اللي بيدور عليه؟
+“أندرو كارنيجي” — الصبي الفقير اللي بدأ شغله ببيشين في الساعة —
+بقى في النهاية من أغنى رجال العالم، بثروة وصلت لـ160 مليون دولار
+وسرّه بسيط جدًا:
+"الطريق الوحيد للتأثير في الناس هو إنك تتكلم عما يريدونه هم، وكيف يحصلون عليه".
+وده بالضبط اللي بيعمله الكاتب الذكي
+اللي بيكتب بعقل جمهوره مش بعقله هو
+لو عايز تكتب محتوى فعّال فعلاً:
+1. افهم جمهورك قبل ما تكتب
+مين هما؟ بيدوروا على إيه؟ إيه اللي يهمهم فعلًا؟
+2. اربط فكرتك برغبتهم هما
+ما تقولش "أنا شايف ده مفيد"،
+قول "ده ممكن يحل مشكلتك أو يحقق هدفك"
+3. اسمع قبل ما تنشر
+اقرأ تعليقاتهم، راقب تفاعلهم، شوف إيه اللي بيشدّهم.
+4.اكتب بنية حقيقية
+مش علشان تزوّد المتابعين،
+لكن علشان توصل قيمة أو تساعد حد فعلاً
+وفي النهاية…
+خليك صياد ذكي
+وادّي السمك الديدان اللي بيحبوها وانت ساكت 😉
+دمتم سالمين 🤍✨
+</p>
+
+        <a href="https://www.facebook.com/share/p/1EX1oYusXN/">view post</a>
+</div>
+</div>
+
+
+        </div>
+
+    </section>
+      <section id="script" class="section">
+        <div class="posts-container">
+            <div class="section-header">
+                <h2> Scripts</h2>
+            </div>
+<div class="cards">
+
+<div class="post-item">
+<p dir="rtl">
+    العد التنازلي بدأ!
+
+حملة العروض الكبيرة للهاكر جاية قريب 😎
+فرص ومفاجآت وكورسات هدية، حاجات مش هتتكرر
+
+ استنوا التفاصيل… العرض هيكون لفترة محدودة!
+
+خلي عينك على احلم، وخلي خطواتك الأولى معانا وتابع الصفحة عشان يوصلك كل جديد 
+
+عروض الهاكر متتفوتش!
+</p>
+</div>
+<div class="post-item">
+<p dir="rtl">
+    ٧ من كل ١٠ خلافات بين الأزواج مش سببها اختلاف شخصيات… ولا حتى قلة حب.
+السبب الحقيقي بيكون احتياج بسيط مش مفهوم.
+
+الست تلاقي نفسها طول الوقت بتشتكي إنه مش مهتم، مش واخد باله من تفاصيلها ولا بيديها إحساس بالأمان.
+وفي المقابل هو يحس إنه مهما عمل محدش شايف تعبه، ومفيش كلمة تقدير أو احترام ترفع من قيمته قدام نفسه.
+
+مع الوقت الاتنين يتعبوا… هي تبان في صورة النكدية اللي مش راضية، وهو يبقى البارد اللي مش فارق معاه.
+وساعتها العلاقة تتحول لساحة شد وجذب بدل ما تكون مصدر راحة وسند.
+
+لكن الحقيقة إن دي مش مشكلة شخصيات… دي احتياجات طبيعية.
+المرأة بطبيعتها محتاجة الاهتمام والأمان علشان تقدر تفتح قلبها وتدي حب أكتر.
+والرجل محتاج الاحترام والتقدير علشان يحس بقيمته ويستمر يعطي أكتر.
+
+ولما كل طرف يفهم الاحتياج ده عند التاني، العلاقة تبقى أبسط وأدفى… مكان آمن يتبني فيه حب حقيقي بدل ما يتبني جدار من اللوم والعتاب.
+
+💡 ولو حابب تفهم أكتر يعني إيه "احتياجات نفسية" وإزاي تقدر تكتشفها عندك… اعمل لايك وابعتلنا وهتوصلك المعلومة.
+</p>
+</div>
+<div class="post-item">
+<p dir="rtl">
+    عارف إن الانطباع الأول بيتكوّن أسرع مما تتخيل؟
+الدراسات أثبتت إن:
+🔹 خلال 6–10 ثواني من قراءة الـ CV بيتحدد إذا كان يشد الـ HR ولا لأ.
+🔹 وفي المقابلة الشخصية، 55% من الانطباع الأول بييجي من لغة الجسد، و38% من نبرة الصوت، أما الكلمات نفسها فـ تمثل بس 7%بس!!
+
+يعني الموضوع مش مجرد ورق وكلام…
+الموضوع إنك تعرف:
+✔️ إزاي تكتب CV يلفت النظر.
+✔️ إزاي تدير مقابلة شخصية وتبان واثق.
+✔️ والأهم… نفهمك إزاي بيفكر الـ HR نفسه!
+
+لو عايز تسبق غيرك وتكون جاهز صح…
+ الحق احجز مكانك دلوقتي (الأماكن محدودة).
+ املى الفورم عشان توصلك كل التفاصيل
+</p>
+</div>
+<div class="post-item">
+<p dir="rtl">
+    حاسس إنك زعلان؟ مضايق؟
+جواك دوشة مشاعر مش مفهومة؟
+يبقى ورشة إدارة المشاعر هي الحل.
+
+هتساعدك تكون واعي باللي بتحس بيه،
+تتحكم في غضبك،
+وتعبر عن اللي جواك من غير ما تؤذي نفسك أو اللي حواليك.
+
+هنشتغل بشكل عملي،
+وفي مساحة آمنة تقدر تتكلم فيها وتفهم نفسك أكتر.
+
+احجز مكانك وابدا معانا أول خطوة في تحسين جودة حياتك 
+
+مع المدرب بيشوي – خبرة أكتر من 15 سنة في التدريب النفسي والذاتي.
+</p>
+</div>
+<div class="post-item">
+<p dir="rtl">
+    هقولك حاجة محدش بيقولها…
+حتى بعد تدريب 2000 شخص في المجال النفسي، لسه في ناس حياتها بتضيع لأنها ما بتعرفش تدير مشاعرها.
+بكرة ورشة إدارة المشاعر… مش ناوي تكون معانا ونستمتع بوقتنا؟ 🎯
+للتفاصيل، سيب كومنت وهنبعتلك كل حاجة.
+</p>
+</div>
+<div class="post-item">
+<p dir="rtl">
+    "النبات محتاج ميّه وضوء علشان يكبر… وأنت محتاج احتياجات نفسية علشان تعيش بصحة واتزان."
+</p>
+</div>
+
+
+
+</div>
+
+
+        </div>
+
+    </section>
 
     <section id="copies" class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Motion Graphics</h2>
-        <p>I create videos and designs on Canva that look like they were made with After Effects —
-you could say it’s a hobby that’s growing day by day 🫡</p>
+                <p>I create videos and designs on Canva that look like they were made with After Effects —
+                    you could say it’s a hobby that’s growing day by day 🫡</p>
             </div>
             <div class="gallery">
                 <video src="projects/videos/001.mp4" controls></video>
                 <video src="projects/videos/002.mp4" controls></video>
                 <video src="projects/videos/003.mp4" controls></video>
                 <video src="projects/videos/004.mp4" controls></video>
-                  <video src="projects/power/003.mp4" controls></video>
+                <video src="projects/power/003.mp4" controls></video>
             </div>
         </div>
     </section>
@@ -1536,12 +1902,18 @@ you could say it’s a hobby that’s growing day by day 🫡</p>
                 <p>Creative copywriting samples displayed in social media story designs</p> -->
             </div>
             <div class="pdfs">
-            <a class="pdf-link" href="projects/stratgy/001.pdf" target="_blank" rel="noopener noreferrer"><span>Strategy </span></a>
-            <a class="pdf-link" href="projects/stratgy/002.pdf" target="_blank" rel="noopener noreferrer"><span>Strategy </span></a>
-            <a class="pdf-link" href="projects/stratgy/003.pdf" target="_blank" rel="noopener noreferrer"><span>Strategy </span></a>
-            <a class="pdf-link" href="projects/stratgy/004.pdf" target="_blank" rel="noopener noreferrer"><span>Strategy </span></a>
-            <a class="pdf-link" href="projects/stratgy/005.pdf" target="_blank" rel="noopener noreferrer"><span>Strategy </span></a>
-            <a class="pdf-link" href="projects/stratgy/006.pdf" target="_blank" rel="noopener noreferrer"><span>Strategy </span></a> 
+                <a class="pdf-link" href="projects/stratgy/001.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Strategy </span></a>
+                <a class="pdf-link" href="projects/stratgy/002.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Strategy </span></a>
+                <a class="pdf-link" href="projects/stratgy/003.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Strategy </span></a>
+                <a class="pdf-link" href="projects/stratgy/004.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Strategy </span></a>
+                <a class="pdf-link" href="projects/stratgy/005.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Strategy </span></a>
+                <a class="pdf-link" href="projects/stratgy/006.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Strategy </span></a>
 
             </div>
 
@@ -1553,15 +1925,16 @@ you could say it’s a hobby that’s growing day by day 🫡</p>
         <div class="container">
             <div class="section-header">
                 <h2>Presentations (PowerPoint)</h2>
-            <p>For students who want their presentations to stand out and grab attention 👀 —
-I used to be really good at this back in college!
-I love adding characters and simple scenes that bring life and personality to each presentation,
-so it delivers the message clearly — without being boring or traditional.</p>
+                <p>For students who want their presentations to stand out and grab attention 👀 —
+                    I used to be really good at this back in college!
+                    I love adding characters and simple scenes that bring life and personality to each presentation,
+                    so it delivers the message clearly — without being boring or traditional.</p>
             </div>
             <div class="gallery">
                 <video src="projects/power/002.mp4" controls></video>
-              
-                    <a class="pdf-link" href="projects/power/001.pdf" target="_blank" rel="noopener noreferrer"><span>Preisnation</span></a>
+
+                <a class="pdf-link" href="projects/power/001.pdf" target="_blank"
+                    rel="noopener noreferrer"><span>Preisnation</span></a>
             </div>
         </div>
     </section>
